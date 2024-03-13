@@ -9,6 +9,9 @@ It creates a simple app made to show understanding of a few React patterns and p
 - Standard component creation to reduce repeating code
 - Hooks
   - `useState()`
+  - `useRef()`
+  - `useContext()`
+  - Custom Hooks
 - Patterns
   - Compound Components
   - Render Props
