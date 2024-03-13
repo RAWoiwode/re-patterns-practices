@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
+// Component used for Render Props
 const SearchableList = ({ items, createItemKey, children }) => {
+  const lastChange = useRef();
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchResults = items.filter((item) =>
     JSON.stringify(item).toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Debouncing
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    if (lastChange.current) {
+      clearTimeout(lastChange.current);
+    }
+
+    lastChange.current = setTimeout(() => {
+      lastChange.current = null;
+      setSearchTerm(event.target.value);
+    }, 500);
   };
 
   return (

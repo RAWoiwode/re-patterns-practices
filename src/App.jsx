@@ -77,6 +77,7 @@ function App() {
         </Accordion>
       </section>
       <section>
+        {/* Render Props */}
         <SearchableList items={PLACES} createItemKey={(item) => item.id}>
           {(item) => <Place item={item} />}
         </SearchableList>
