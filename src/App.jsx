@@ -20,7 +20,7 @@ function App() {
               </p>
             </article>
           </AccordionItem>
-          <AccordionItem
+          <Accordion.Item
             className="accordion-item"
             id={"local-guides"}
             title="We work with local guides"
@@ -31,7 +31,7 @@ function App() {
                 We work with local guides to ensure a safe and pleasant vacation
               </p>
             </article>
-          </AccordionItem>
+          </Accordion.Item>
         </Accordion>
       </section>
     </main>
