@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
+import AccordionContent from "./AccordionContent.jsx";
 import AccordionItem from "./AccordionItem.jsx";
+import AccordionTitle from "./AccordionTitle.jsx";
 
 const AccordionContext = createContext();
 
@@ -15,7 +17,7 @@ export const useAccordionContext = () => {
   return ctx;
 };
 
-// Compound Component w/ AccordionItem
+// Compound Component Base
 const Accordion = ({ className, children }) => {
   const [openItemId, setOpenItemId] = useState();
 
@@ -36,5 +38,7 @@ const Accordion = ({ className, children }) => {
 };
 
 Accordion.Item = AccordionItem;
+Accordion.Title = AccordionTitle;
+Accordion.Content = AccordionContent;
 
 export default Accordion;
