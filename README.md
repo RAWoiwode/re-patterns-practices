@@ -11,3 +11,8 @@ It creates a simple app made to show understanding of a few React patterns and p
   - `useState()`
 - Patterns
   - Compound Components
+  - Render Props
+  - Debouncing
+- Practices
+  - Resuability
+  - Configurability
