@@ -9,6 +9,7 @@ function App() {
         <Accordion className="accordion">
           <AccordionItem
             className="accordion-item"
+            id={"experience"}
             title="We got 20 years of experience"
           >
             <article>
@@ -21,6 +22,7 @@ function App() {
           </AccordionItem>
           <AccordionItem
             className="accordion-item"
+            id={"local-guides"}
             title="We work with local guides"
           >
             <article>
